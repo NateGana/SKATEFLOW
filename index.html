@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SKATEFLOW — Find Your Flow. Master Your Tricks.</title>
+  <link rel="icon" href="assets/icons/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="app" id="app">
+    <aside class="sidebar" id="sidebar" aria-label="Main navigation">
+      <div class="brand">
+        <img src="assets/icons/favicon.svg" alt="" width="34" height="34">
+        <div class="brand-text"><strong>SKATEFLOW</strong><span>FIND YOUR FLOW.</span></div>
+      </div>
+      <nav id="nav" class="nav"></nav>
+      <button class="profile-chip" id="profileChip" data-action="nav.settings" aria-label="Open profile and settings"></button>
+    </aside>
+    <div class="scrim" id="scrim" data-action="nav.close"></div>
+
+    <div class="main">
+      <header class="topbar">
+        <button class="icon-btn" data-action="nav.toggle" aria-label="Toggle menu"><i data-lucide="menu"></i></button>
+        <label class="global-search">
+          <i data-lucide="search"></i>
+          <input id="globalSearch" type="search" placeholder="Search everything" autocomplete="off">
+        </label>
+        <button class="icon-btn" data-action="theme.toggle" id="themeBtn" aria-label="Switch theme"><i data-lucide="sun-moon"></i></button>
+      </header>
+      <main id="view" class="view" tabindex="-1"></main>
+    </div>
+  </div>
+
+  <div id="modalRoot"></div>
+  <div id="confirmRoot"></div>
+  <div id="toastRoot" aria-live="polite"></div>
+
+  <!-- Icons and charts come from CDNs. The app still works if they fail to load. -->
+  <script src="https://cdn.jsdelivr.net/npm/lucide@0.469.0/dist/umd/lucide.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.7/dist/chart.umd.min.js"></script>
+
+  <!-- Plain scripts (no modules) so the app also opens by double-clicking index.html. Order matters. -->
+  <script src="js/utils.js"></script>
+  <script src="js/seed.js"></script>
+  <script src="js/storage.js"></script>
+  <script src="js/dashboard.js"></script>
+  <script src="js/progress.js"></script>
+  <script src="js/tricks.js"></script>
+  <script src="js/sessions.js"></script>
+  <script src="js/skateparks.js"></script>
+  <script src="js/equipment.js"></script>
+  <script src="js/challenges.js"></script>
+  <script src="js/journal.js"></script>
+  <script src="js/goals.js"></script>
+  <script src="js/community.js"></script>
+  <script src="js/settings.js"></script>
+  <script src="js/search.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
